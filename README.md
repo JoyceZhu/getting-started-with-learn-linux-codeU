@@ -83,44 +83,25 @@ to get them.
 
 ### The Main Attraction
 
-To install Ruby, we're going to use a version manager called [`rbenv`](https://github.com/rbenv/rbenv). The reason that we're adding this bit of indirection is that your system probably already has its own version of Ruby – we don't want to mess with it.
+To install Ruby, we're going to use a version manager called [`rvm`](https://rvm.io/rvm/install). The reason that we're adding this bit of indirection is that your system probably already has its own version of Ruby – we don't want to mess with it.
 
 (Note: Some of you might be complaining about installing Ruby for a series of Java lessons. Learn's software depends on Ruby, and while we won't be covering it much here, Ruby is an interesting language and one that's used all over the place in software engineering (especially web development). You don't have to like it, but you'd do well to learn it.)
 
-Feel free to follow along with the official instructions: https://github.com/rbenv/rbenv
+Feel free to follow along with the official instructions: https://rvm.io/rvm/install. We are just copying them from that site, so feel free to just head over there.
 
-First let's clone the `rbenv` source using `git`:
-
-```bash
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-```
-
-Then add `~/.rbenv/bin`to your `$PATH` so that you can execute `rbenv` at the command line. (If you're not using bash as your shell, use the config file that's appropriate (e.g., `~/.zshrc` if you're using zsh).)
+First let's setup the gpg key so that everything is secure:
 
 ```bash
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 ```
 
-The [`rbenv` documentation](https://github.com/rbenv/rbenv#understanding-path) has a brief and excellent section on `$PATH` if you're unsure how that works.
-
-Run `~/.rbenv/bin/rbenv init` for specific instructions to add `rbenv` to the available commands. Go ahead and follow those instructions; we'll wait right here.
-
-![](http://i.giphy.com/3oEdv9pgtUVVYdpaY8.gif)
-
-Install the [`ruby-build`](https://github.com/rbenv/ruby-build) plugin. This way we can install Ruby versions with `rbenv install x.y.z` and be on our way.
+Then we are going to do the actual install of RVM. This will take a while
 
 ```bash
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+\curl -sSL https://get.rvm.io | bash -s stable --rails
 ```
 
-Finally, install Ruby 2.3.0
-
-```bash
-rbenv install 2.3.0
-rbenv global 2.3.0
-```
-
-You can check your installation with `ruby -v` – it should print something like `ruby 2.3.0p0 (2015-12-25 revision 53290)`.
+Give your terminal a restart and you should now have ruby. Check it out by typing `ruby --version`
 
 ## Install Learn
 
@@ -154,5 +135,3 @@ Bada-bing!
 ## Resources
 
 - [DigitalOcean's guide to installing git on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-14-04)
-- [DigitalOcean's guide to installing Ruby (on Rails) on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-14-04); **ignore the Rails bits**
-- [gorails.com's guide to installing Ruby (on Rails) on Ubuntu 14.04](https://gorails.com/setup/ubuntu/14.04); **ignore the Rails bits**
