@@ -91,7 +91,7 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 Then we are going to do the actual install of RVM. This will take a while
 
 ```bash
-\curl -sSL https://get.rvm.io | bash -s stable --rails
+curl -sSL https://get.rvm.io | bash -s stable --rails
 ```
 
 Give your terminal a restart and you should now have ruby. Check it out by typing `ruby --version`
@@ -117,7 +117,7 @@ Then run `learn hello` again and follow the instructions.
 
 ## Install Java and Ant
 
-Compared to install Ruby, installing [Java](https://java.com/en/download/) and [Ant](http://ant.apache.org/) (a Java build tool) is easy. Just run
+Compared to installing Ruby, installing [Java](https://java.com/en/download/) and [Ant](http://ant.apache.org/) (a Java build tool) is easy. Just run
 
 ```bash
 sudo apt-get install default-jre default-jdk ant
