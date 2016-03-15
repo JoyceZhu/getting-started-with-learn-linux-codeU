@@ -91,7 +91,7 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 Then we are going to do the actual install of RVM. This will take a while
 
 ```bash
-\curl -sSL https://get.rvm.io | bash -s stable --rails
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
 ```
 
 Give your terminal a restart and you should now have ruby. Check it out by typing `ruby --version`
@@ -128,3 +128,5 @@ Bada-bing!
 ## Resources
 
 - [DigitalOcean's guide to installing git on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-14-04)
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/getting-started-with-learn-linux'>Getting Started With Learn (Linux)</a> on Learn.co and start learning to code for free.</p>
