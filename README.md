@@ -15,17 +15,10 @@ sudo apt-get update
 sudo apt-get install git
 sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev
 
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bash_profile
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
 
 # (restart your shell)
-
-rbenv install 2.3.0 # this will take a while
-rbenv global 2.3.0
 
 gem install learn-co
 learn hello
