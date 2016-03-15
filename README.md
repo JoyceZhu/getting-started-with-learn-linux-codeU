@@ -34,6 +34,9 @@ chmod 0600 ~/.netrc
 sudo apt-get install default-jre
 sudo apt-get install default-jdk
 sudo apt-get install ant
+
+# Configure your SSH keys with GitHub:
+# https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-linux
 ```
 
 Read on if you're the detail-oriented type.
@@ -62,9 +65,23 @@ sudo apt-get install git
 
 And you're done!
 
+## Configuring Git and GitHub
+
+Next, you'll need to set up your SSH keys so that [GitHub](https://github.com) can recognize your local machine.
+
+Log in on GitHub, and then go to your settings.
+
+![GitHub settings](https://curriculum-content.s3.amazonaws.com/javacs/github_settings.png)
+
+On the lefthand side of the screen, click "SSH keys".
+
+At the bottom of the "SSH keys" box that shows up on the next screen, click the link for "generating SSH keys" and follow the [instructions there](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-linux).
+
+Now when you go to clone a repository, be sure to clone it with SSH!
+
 ## Install Ruby
 
-### Prerequesites
+### Prerequisites
 
 Ruby requires a few additional libraries to install. Run
 
@@ -124,6 +141,7 @@ sudo apt-get install default-jre default-jdk ant
 ```
 
 Bada-bing!
+
 
 ## Resources
 
