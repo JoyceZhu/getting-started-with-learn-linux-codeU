@@ -142,6 +142,11 @@ sudo apt-get install default-jre default-jdk ant
 
 Bada-bing!
 
+If running ```learn test``` gives you a long error ending in "This is not a bug; it is a configuration problem", you may need to additionally install the package ```ant-optional``` (if your package manager is apt-get) or ```ant-junit``` (if your package manager is yum):
+
+```bash
+sudo apt-get install ant-optional
+```
 
 ## Resources
 
